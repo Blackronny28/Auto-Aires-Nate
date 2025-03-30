@@ -1,0 +1,278 @@
+/* Estilos generales para el sitio */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #007bff; /* Azul */
+    color: rgb(37, 204, 15);
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #20cc1a; /* Verde claro */
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Animaciones para entrada de sección */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Diseño de servicios */
+.servicio {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.servicio:hover {
+    transform: translateY(-10px); /* Levanta la tarjeta */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.servicio ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Efecto de desvanecimiento y desplazamiento de las imágenes */
+@keyframes fadeInUpImage {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Activar animación de imagen */
+.servicio img {
+    animation: fadeInUpImage 1s forwards;
+}
+
+.telefonos a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #007bff; /* Azul */
+    transition: color 0.3s ease;
+}
+
+.telefonos a:hover {
+    color: #20c997; /* Verde claro */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #007bff; /* Azul */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1.1em;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo de enlaces cuando son activados */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Media Queries para adaptarse a dispositivos móviles */
+@media (max-width: 768px) {
+    .servicio {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Animación de deslizamiento de la cabecera */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Fondo animado */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #025810, #14860a, #0084c9, #00aaff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: -1;
+}
+
+/* Animación del fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ajustes para que el contenido sea más legible sobre el fondo */
+body {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+header, section, footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.animated-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Activación de la animación cuando las imágenes aparecen en pantalla */
+.animated-image.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajustes para las imágenes y los contenedores */
+.servicio {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.animated-image {
+    width: 100%;
+    max-width: 800px;  /* Puedes ajustar este tamaño según tus necesidades */
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Agregado para un efecto de sombra */
+}
+
+/* Activación de la animación cuando las imágenes aparecen en pantalla */
+.animated-image.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contacto, #ubicacion {
+    margin-bottom: 20px;
+}
+
+#contacto p, #ubicacion p {
+    margin: 5px 0;
+}
+footer iframe {
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
